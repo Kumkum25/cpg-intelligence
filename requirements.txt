@@ -1,0 +1,33 @@
+# Core engine (demand profiling, economic profiling)
+pandas>=3.1,<4
+numpy>=2.5,<3
+scipy>=1.18,<2
+
+# Forecasting engine
+statsmodels>=0.15,<0.16
+scikit-learn>=1.9,<2
+lightgbm>=4.7,<5
+
+# API backend
+fastapi>=0.165,<0.166
+uvicorn[standard]>=0.54,<0.55
+pydantic>=2.14,<3
+python-multipart>=0.0.34,<0.1
+httpx>=0.28,<0.29          # used by FastAPI's TestClient in tests
+
+# Frontend
+streamlit>=1.67,<2
+plotly>=7.2,<8
+requests>=2.34,<3
+openpyxl>=3.1,<4           # Excel export
+fpdf2>=2.9,<3               # PDF executive summary export
+watchdog>=7.0               # reliable Streamlit hot-reload during development
+
+# LLM providers (optional — only one is needed, and only if you set
+# NEXUS_LLM_PROVIDER=anthropic / openai; the default "mock" provider needs
+# neither and costs nothing)
+anthropic>=2.14,<3
+openai>=3.59,<4
+
+# Tests
+pytest>=9.2,<10
